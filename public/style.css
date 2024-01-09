@@ -1,0 +1,90 @@
+
+  @import url('https://fonts.googleapis.com/css2?family=Cedarville+Cursive&family=Mulish:wght@300&family=Open+Sans&family=Poppins:wght@300&family=Roboto&family=Roboto+Condensed:wght@300;400&display=swap');
+
+*{
+   margin: 0;
+   padding: 0;
+   font-family: 'Mulish';
+   
+}
+body{
+    background-color: aqua;
+}
+.containerBox{
+    width: 350px;
+   
+    
+    border-radius: 4px;
+    position: absolute;
+    left: 40%;
+    top: 90px;
+   
+    background-color: aliceblue;
+    box-shadow: 0 2px 4px  ;
+   
+   
+   
+}
+
+form{
+    margin: 20px;
+   
+}
+.routeBox{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 30px;
+    
+}
+.forgot{
+    margin: 2px 5px;
+    text-decoration: none;
+    color: blue;
+}
+.login{
+    margin: 2px 5px;
+    text-decoration: none;
+    color: blue; 
+}
+.Register{
+    margin-bottom: 15px;
+    text-decoration: none;
+    color: green;
+   
+}
+.routeBox .btn{
+    margin: 15px;
+}
+.loginRedirect{
+    text-align: center;
+    padding-bottom: 2px;
+   
+}
+.containerBox h3{
+    text-align: center;
+    font-weight: bold;background-color: blueviolet;
+    /* height: 40px; */
+   padding: 10px;
+    color: white;
+   
+}
+.btn{
+    margin-bottom: 10px;
+}
+h1{
+    background-color: cyan;
+    box-shadow: 0 2px 4px;
+    padding: 10px 4px;
+}
+
+.loginBox{
+    position: absolute;
+    left: 40%;
+    top: 150px;
+}
+.ForgotPasswrd{
+    position: absolute;
+    left: 40%;
+    top: 150px;
+}

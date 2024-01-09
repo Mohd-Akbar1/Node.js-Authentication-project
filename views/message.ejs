@@ -1,0 +1,28 @@
+<% if(locals.flash.success && flash.success.length > 0){%>
+      <div class="container messageBox">
+            <div class="alert alert-info alert-dismissible w-50 container ">
+        
+                  <button type="button" class="btn-close" aria-label="Close" data-bs-dismiss="alert"></button>
+                  
+                  <strong><%= flash.success %></strong>
+                 
+        
+                 
+             </div>
+      </div>
+    
+   
+     <%} %>
+
+     <% if(locals.flash.error && flash.error.length > 0){%>
+        <div class="alert alert-danger alert-dismissible w-50 container">
+            
+              <button type="button" class="btn-close" aria-label="Close" data-bs-dismiss="alert"></button>
+              
+              <strong><%= flash.error %></strong>
+             
+    
+             
+         </div>
+       
+         <%} %>

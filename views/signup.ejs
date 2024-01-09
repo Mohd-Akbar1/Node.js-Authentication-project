@@ -1,0 +1,40 @@
+<%- include('./partials/header'); -%>
+
+    
+      
+        <h1 class=" bg-primary text-white p-2 shadow-sm p-3   rounded">SignUp Page</h1>
+
+        <%- include('message') %>
+ 
+    <div class="containerBox w-25 mt-5">
+            <h3>Sing Up</h3>
+            <form action="/signup" method="post">
+                <div class="mb-3">
+                <label for="Name" class="form-label">Name</label>
+                  <input type="text" class="form-control" id="name" aria-describedby="emailHelp" name="name" required>
+                  
+                </div>
+
+                    <div class="mb-3">
+                    <label for="email" class="form-label">Email </label>
+                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="email" required>
+                    <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                    </div>
+
+                <div class="mb-3">
+                  <label for="password" class="form-label">Password</label>
+                  <input type="password" class="form-control" id="exampleInputPassword1" name="password" required>
+                </div>
+
+                <div class="mb-3">
+                    <label for="confirmPassword" class="form-label">confirm Password</label>
+                    <input type="password" class="form-control" id="exampleInputPassword1" name="confirmPassword" required>
+                  </div>
+            
+                <button type="submit" class="btn btn-primary">Submit</button>
+              </form>
+        
+        <p class="loginRedirect">Already have an account <a href="/login" class="login">Login</a></p>
+   
+    
+        <%- include('./partials/footer'); -%>

@@ -1,0 +1,46 @@
+<%- include('./partials/header'); -%>
+
+    
+
+    <h1 class=" bg-primary text-white p-2 shadow-sm p-3 mb-1   rounded">Login Page</h1>
+    
+    
+    <%- include('message') %>
+       
+
+  <div class="containerBox w-25 loginBox">
+        <h3>Log In</h3>
+        <form action="/signin" method="post" >
+            
+    
+                <div class="mb-3">
+                <label for="email" class="form-label">Email </label>
+                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="email">
+            
+                </div>
+    
+            <div class="mb-3">
+              <label for="password" class="form-label">Password</label>
+              <input type="password" class="form-control" id="exampleInputPassword1" name="password">
+            </div>
+    
+            
+        
+            <button type="submit" class="btn btn-primary">login</button>
+          </form>
+          <div class="routeBox">
+            <div class="links">
+                <a href="/forgot-password" class="forgot"> forgot-password?</a>
+                <span>|</span>
+              <a href="/signup" class="Register">Register</a>
+              </div>
+              
+              <a href="/auth/google"> <button type="submit" class="btn btn-danger">login with Google</button></a>
+          </div>
+          
+          
+       
+    </div>
+   
+    
+    <%- include('./partials/footer'); -%>
