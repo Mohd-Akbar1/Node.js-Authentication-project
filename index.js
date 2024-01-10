@@ -24,7 +24,7 @@ app.use(express.static('public'))
 // sessions 
 app.use(session({
     name: "nodejs- auth",
-    secret: 'something',
+    secret: 'somethingSecret',
     saveUninitialized: false,
     resave: false,
     cookie:{
