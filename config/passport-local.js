@@ -1,5 +1,5 @@
 const passport=require('passport')
-
+const bcrypt=require('bcrypt')
 const User = require('../model')
 
 
@@ -10,11 +10,17 @@ passport.use(new LocalStrategy({usernameField:'email'},async function(email,pass
     try {       
         //finding user email in db
                 let user=await User.findOne({email:email});
+                
             
-            if(!user||user.password!==password){
+            if(!user){
                 return done(null,false)
             }
-            return done(null,user)
+            if( await bcrypt.compare(password,user.password)){
+                return done(null,user)
+            }else{
+                return done(null,false)
+            }
+           
     } catch (error) {
         console.log('Error occured',error)
         return done(error)

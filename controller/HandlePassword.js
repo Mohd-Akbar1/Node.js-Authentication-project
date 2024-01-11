@@ -1,6 +1,7 @@
 const {sendMail}=require('../config/Nodemailer.js')
 const User=require('../model')
 const jwt =require('jsonwebtoken');
+const bcrypt=require('bcrypt')
 
 
 const JWT_SECRET='secret'
@@ -10,16 +11,21 @@ const JWT_SECRET='secret'
 async function forgotpassword(req,res){
     res.render('forgot-password')
 }
+
+
+
 //controller for sending email link to reset password
+
 async function forgotpasswordHandle(req,res){
    try {
     const email=req.body.email;
 
     //if user doesnt exists
+
     const user=await User.findOne({email})
     if(!user){
         req.flash("error", "user Does not exist");
-        return res.render('forgot-password')
+        return res.redirect('forgot-password')
     }
     
     //if user finds and create a one time link valid for 10 min
@@ -74,21 +80,29 @@ async function resetPasswordHandle(req,res){
     const {id,token}=req.params;
    
     const {password,password2}=req.body
+
     const user=await User.findById(id)
-    // const user=await User.findOne({email})
+
+    
     if(id!==user.id){
-        return res.send('invalid id...e')
+        return res.send('invalid id')
      }
 
     const secret=JWT_SECRET+user.password;
+
     try {
         const payload=jwt.verify(token,secret)
+
        //validate password and password2
       if(password!==password2){
+
         req.flash('error','Both password must be Same')
+
         return res.redirect('back')
        }else{
-        await User.findByIdAndUpdate(id,{$set:{password:password}})
+        //hasing password
+        const hashedPassword=await bcrypt.hash(password,10)
+        await User.findByIdAndUpdate(id,{$set:{password:hashedPassword}})
         req.flash('success','Password Updated Sucessfully')
        return  res.redirect('/')
        }

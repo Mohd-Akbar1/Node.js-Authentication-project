@@ -88,3 +88,17 @@ h1{
     left: 40%;
     top: 150px;
 }
+.home a{
+    text-decoration: none;
+    font-weight: bold;
+    color: white;
+    position: absolute;
+    top: 30px;
+    right: 50px;
+}
+#google{
+    width: 200px;
+    margin: 20px auto;
+    border-radius: 4px;
+    
+}

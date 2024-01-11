@@ -61,7 +61,7 @@ Passport.authenticate('google', { failureRedirect: '/login' }),
 
 router.post('/signin', passport.authenticate('local', {
   failureRedirect: '/login',
-  failureFlash: 'Invalid Details or Credentials'
+  failureFlash: 'Invalid Username or Password'
 }), function(req, res) {
   if (req.flash('error').length === 0) {
       // Set failureFlash message only if there's no error flash already set

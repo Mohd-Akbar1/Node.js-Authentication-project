@@ -10,7 +10,7 @@ async function sendMail(link,email){
         service:'gmail',
         auth:{
             user:'34mohdakbar@gmail.com',
-            pass:'ifhr fcsg apke jpig'
+            pass:process.env.EMAIL
         }
     })
     //2 configure email content

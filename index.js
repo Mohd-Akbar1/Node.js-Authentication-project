@@ -1,3 +1,4 @@
+require('dotenv').config()
 const express=require('express');
 const app=express()
 const router=require('./routes')
@@ -14,7 +15,7 @@ mongoose.connect('mongodb://127.0.0.1:27017/AUthentication3Jan')
 
 //setting view engine
 app.set('view engine','ejs')
-app.set(views)
+
 
 app.use(express.urlencoded({extended:false}))
 app.use(express.json())
