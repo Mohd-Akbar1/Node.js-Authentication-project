@@ -10,7 +10,7 @@ const customMiddleware=require('./config/flash')
 
 
 //connecting Database
-mongoose.connect('mongodb://127.0.0.1:27017/AUthentication3Jan')
+mongoose.connect('mongodb+srv://abbashasmi:UgTzfR30yyl1R0aI@cluster0.beunwzd.mongodb.net/?retryWrites=true&w=majority')
 
 
 //setting view engine
