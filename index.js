@@ -7,7 +7,7 @@ const passport=require('passport')
 const session = require('express-session');
 const flash=require('connect-flash')
 const customMiddleware=require('./config/flash')
-
+const bcrypt=require('bcryptjs')
 
 //connecting Database
 mongoose.connect(process.env.DataBaseUrl)
