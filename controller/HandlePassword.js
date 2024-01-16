@@ -43,7 +43,7 @@ async function forgotpasswordHandle(req,res){
     console.log('email:',email)
    
     // res.send('Passwrd link has sent to email...')
-    req.flash("error", `Passwrd link has been sent to email:${email}`);
+    req.flash("error", `Password link has been sent to email : ${email}`);
     return res.redirect('back')
 
    } catch (error) {
