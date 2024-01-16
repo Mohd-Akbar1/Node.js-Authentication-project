@@ -10,19 +10,19 @@
 + css
 + javascript
 
-  ## Features
+ ## Features
     
-    + User can register with name , email and password
-    + Password will be Encrypted
-    + user can sign in with registered Email and Password
-    + User can Change Password for registered Email
-    + user will get a Link to reset password on submitted Email
-    + User can Login with Google
++ User can register with name , email and password
++ Password will be Encrypted
++ user can sign in with registered Email and Password
++ User can Change Password for registered Email
++ user will get a Link to reset password on submitted Email
++ User can Login with Google    
 
-  ## How to use Local 
+## How to use Local 
   + clone the project
   + Run npm init & install Dependencies
-  + Run npm start
+  + Run node start
   + Open the browser on http://localhost:8000/
   + Login Page will display
 
